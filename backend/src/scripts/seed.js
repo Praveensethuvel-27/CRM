@@ -301,10 +301,11 @@ const seed = async () => {
     ])
 
     await Setting.create({
-      companyName: 'CRM Portal SaaS',
+      companyName: 'LeadDesk',
       companyAddress: '100 Innovation Blvd, Suite 400',
       companyPhone: '+1 (555) 019-2834',
-      companyEmail: 'contact@crmportal.io',
+      companyEmail: 'contact@leaddesk.io',
+      logoUrl: '/logo.png',
       currency: 'USD ($)',
       timezone: 'UTC',
     })

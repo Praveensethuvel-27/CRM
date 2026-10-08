@@ -124,14 +124,14 @@ export default function DashboardLayout() {
       <div className="flex flex-1">
         {/* Desktop Light Sidebar */}
         <aside className="hidden lg:flex w-64 flex-col border-r border-slate-200 bg-white shadow-xs">
-          {/* Logo & Clean Brand Header */}
-          <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-              C
-            </div>
+          {/* LeadDesk Logo & Brand Header */}
+          <div className="p-5 border-b border-slate-100 flex items-center gap-3">
+            <img src="/logo.png" alt="LeadDesk Logo" className="h-10 w-auto object-contain" />
             <div>
-              <h2 className="text-lg font-bold text-slate-900 tracking-tight">CRM Portal</h2>
-              <p className="text-xs text-slate-400">Enterprise Workspace</p>
+              <h2 className="text-lg font-bold text-slate-900 tracking-tight leading-tight">
+                Lead<span className="text-amber-500">Desk</span>
+              </h2>
+              <p className="text-[11px] text-slate-400 font-medium">Smart CRM Portal</p>
             </div>
           </div>
 
@@ -145,11 +145,11 @@ export default function DashboardLayout() {
                   to={item.path}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
                     isActive
-                      ? 'bg-blue-50 text-blue-700 shadow-xs'
+                      ? 'bg-amber-50/80 text-amber-700 shadow-xs border-r-2 border-amber-500'
                       : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                   }`}
                 >
-                  <span className={isActive ? 'text-blue-600' : 'text-slate-400'}>
+                  <span className={isActive ? 'text-amber-600' : 'text-slate-400'}>
                     {item.icon}
                   </span>
                   <span>{item.label}</span>
@@ -161,7 +161,7 @@ export default function DashboardLayout() {
           {/* User Card & Logout in Sidebar Footer */}
           <div className="p-4 border-t border-slate-100 bg-slate-50/50">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-semibold flex items-center justify-center text-sm border border-blue-200">
+              <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-sm border border-amber-200">
                 {auth.user?.fullName ? auth.user.fullName[0].toUpperCase() : 'U'}
               </div>
               <div className="flex-1 min-w-0">
@@ -196,14 +196,14 @@ export default function DashboardLayout() {
 
             {/* Slide-out Sidebar Content */}
             <div className="fixed inset-y-0 left-0 w-72 max-w-[85vw] bg-white shadow-2xl flex flex-col z-10 animate-in slide-in-from-left duration-200">
-              <div className="p-5 border-b border-slate-100 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-sm">
-                    C
-                  </div>
+              <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <img src="/logo.png" alt="LeadDesk Logo" className="h-9 w-auto object-contain" />
                   <div>
-                    <h2 className="text-base font-bold text-slate-900 tracking-tight">CRM Portal</h2>
-                    <p className="text-[11px] text-slate-400">Enterprise Workspace</p>
+                    <h2 className="text-base font-bold text-slate-900 tracking-tight leading-tight">
+                      Lead<span className="text-amber-500">Desk</span>
+                    </h2>
+                    <p className="text-[10px] text-slate-400">Smart CRM Portal</p>
                   </div>
                 </div>
                 <button
@@ -228,11 +228,11 @@ export default function DashboardLayout() {
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${
                         isActive
-                          ? 'bg-blue-50 text-blue-700 shadow-xs'
+                          ? 'bg-amber-50/80 text-amber-700 shadow-xs border-r-2 border-amber-500'
                           : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                       }`}
                     >
-                      <span className={isActive ? 'text-blue-600' : 'text-slate-400'}>
+                      <span className={isActive ? 'text-amber-600' : 'text-slate-400'}>
                         {item.icon}
                       </span>
                       <span>{item.label}</span>
@@ -244,7 +244,7 @@ export default function DashboardLayout() {
               {/* Mobile User Footer */}
               <div className="p-4 border-t border-slate-100 bg-slate-50/70">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-semibold flex items-center justify-center text-sm border border-blue-200">
+                  <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-sm border border-amber-200">
                     {auth.user?.fullName ? auth.user.fullName[0].toUpperCase() : 'U'}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -277,11 +277,11 @@ export default function DashboardLayout() {
         <div className="flex-1 flex flex-col min-w-0 bg-slate-50">
           {/* Top Navbar */}
           <header className="h-16 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-10 shadow-xs">
-            {/* Left: Mobile Hamburger Button & Title */}
+            {/* Left: Mobile Hamburger Button & LeadDesk Brand */}
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition"
+                className="lg:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
                 aria-label="Open mobile menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -289,19 +289,19 @@ export default function DashboardLayout() {
                 </svg>
               </button>
 
-              <div className="flex items-center gap-2 lg:hidden">
-                <div className="w-7 h-7 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center text-sm">
-                  C
-                </div>
-                <span className="font-bold text-slate-900 text-sm">CRM</span>
+              <div className="flex items-center gap-2.5 lg:hidden">
+                <img src="/logo.png" alt="LeadDesk Logo" className="h-7 w-auto object-contain" />
+                <span className="font-bold text-slate-900 text-base">
+                  Lead<span className="text-amber-500">Desk</span>
+                </span>
               </div>
             </div>
 
-            {/* Right: Profile & Email */}
+            {/* Right: Profile & Security */}
             <div className="flex items-center gap-3">
               <Link
                 to="/profile"
-                className="text-xs font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg transition"
+                className="text-xs font-medium text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg transition"
               >
                 Profile & Security
               </Link>

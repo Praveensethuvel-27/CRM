@@ -4,7 +4,7 @@ const settingSchema = new mongoose.Schema(
   {
     companyName: {
       type: String,
-      default: 'CRM Portal SaaS',
+      default: 'LeadDesk',
     },
     companyAddress: {
       type: String,

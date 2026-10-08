@@ -25,7 +25,13 @@ export default function ChangePasswordPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 flex items-center justify-center p-6 font-sans">
       <div className="w-full max-w-md bg-white rounded-3xl border border-slate-200/80 p-8 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900 mb-1">Change Password</h2>
+        <div className="text-center mb-6">
+          <img src="/logo.png" alt="LeadDesk Logo" className="h-14 w-auto mx-auto object-contain mb-2" />
+          <h1 className="text-xl font-bold text-slate-900 tracking-tight">
+            Lead<span className="text-amber-500">Desk</span>
+          </h1>
+        </div>
+        <h2 className="text-lg font-bold text-slate-900 mb-1">Change Password</h2>
         <p className="text-xs text-slate-500 mb-6">Choose a strong password to protect your CRM account.</p>
 
         {message && (

@@ -36,13 +36,17 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40 flex items-center justify-center p-6 font-sans">
       <div className="w-full max-w-md">
-        {/* Top Brand Pill */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-600 text-white font-bold text-2xl shadow-md shadow-blue-500/20 mb-3">
-            C
-          </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">CRM Portal SaaS</h1>
-          <p className="text-sm text-slate-500 mt-1">Node.js Express + MongoDB Atlas Backend</p>
+        {/* Top Brand Logo */}
+        <div className="text-center mb-6">
+          <img
+            src="/logo.png"
+            alt="LeadDesk Logo"
+            className="h-20 w-auto mx-auto object-contain mb-3 drop-shadow-xs"
+          />
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+            Lead<span className="text-amber-500">Desk</span>
+          </h1>
+          <p className="text-xs text-slate-500 mt-1">Smart CRM & Sales Automation Platform</p>
         </div>
 
         {/* White Card */}
@@ -129,7 +133,7 @@ export default function LoginPage() {
         </div>
 
         <p className="text-center text-xs text-slate-400 mt-6">
-          Light UI Theme • Powered by Node.js Express & MongoDB Atlas
+          © 2026 LeadDesk • Smart CRM & Client Portal
         </p>
       </div>
     </div>

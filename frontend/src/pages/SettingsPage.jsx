@@ -3,7 +3,7 @@ import api from '../services/api'
 
 export default function SettingsPage() {
   const [settings, setSettings] = useState({
-    companyName: 'CRM Portal SaaS',
+    companyName: 'LeadDesk',
     companyAddress: '',
     companyPhone: '',
     companyEmail: '',
