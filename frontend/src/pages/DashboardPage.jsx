@@ -82,7 +82,7 @@ export default function DashboardPage() {
         <div>
           <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Executive Dashboard</h1>
           <p className="text-sm text-slate-500 mt-0.5">
-            Real-time pipeline analytics powered by Node.js & MongoDB Atlas.
+            Track your sales performance, leads, and operational pipeline.
           </p>
         </div>
         <div className="flex items-center gap-2">
